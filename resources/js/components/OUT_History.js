@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import 'mdbreact/dist/mdbreact';
 import { MDBDataTable } from 'mdbreact';
+import { CSVLink } from "react-csv";
 
 class DatatablePage extends Component{
     constructor(){
@@ -16,27 +19,27 @@ class DatatablePage extends Component{
                     {
                         label:"Id Barang",
                         field:"id_goods",
-                        sort: "asc",
+                        key: "id_goods"
                     },
                     {
                         label:"Nama Barang",
                         field:"name_goods",
-                        sort: "asc",
+                        key: "name_goods"
                     },
                     {
                         label:"Jumlah Barang",
                         field:"total",
-                        sort: "asc",
+                        key: "total"
                     },
                     {
                         label:"Tanggal",
                         field:"date",
-                        sort: "asc",
+                        key: "date"
                     },
                     {
                         label:"Admin",
                         field:"first_name",
-                        sort: "asc",
+                        key: "first_name"
                     },
                 ],
                 rows: null
@@ -71,9 +74,22 @@ class DatatablePage extends Component{
     render(){
       return (
         <>
-            <p><strong>RIWAYAT KELUAR</strong></p>
+            <h2><strong>RIWAYAT KELUAR</strong></h2>
+
+            {this.state.data.rows && (
+                <CSVLink
+                    data={this.state.data.rows}
+                    headers={this.state.data.columns}
+                    separator={";"} 
+                    filename={"outHistory.csv"}
+                    className="btn btn-primary btn-sm"
+                    target="_blank">
+                <FontAwesomeIcon icon={faDownload}/>
+                </CSVLink>
+            )}
+
             {this.state.data.rows && ( 
-                <MDBDataTable center
+                <MDBDataTable
                     theadColor="blue"
                     striped
                     bordered
