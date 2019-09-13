@@ -16,9 +16,11 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/history', function(){
-	return view('history_react');
+Route::get('/dashboard', function(){
+	return view('dashboard');
 });
+
+Route::resource('api/graphTotal', 'graphTotalController');
 
 Route::resource('api/inHistory', 'inHistoryController');
 
