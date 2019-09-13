@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>History React</title>
+	<title>Dashboard</title>
 </head>
 <body>
 	<div id="app" class="container"></div>

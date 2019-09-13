@@ -13,6 +13,7 @@ class DatatablePage extends Component{
     constructor(){
         super();
         this.state = {
+        sorting:"true",
         goods:[],
         data: {
                 columns:[
@@ -65,16 +66,13 @@ class DatatablePage extends Component{
             }
             this.state.data.rows = rows_data;
             this.setState({rows: rows_data});
-
-            console.log('rows ',this.state.data.rows);
-            console.log('colums ', this.state.data.columns);
         });
     }
 
     render(){
     	return (
 	        <>
-	            <h2><strong>RIWAYAT MASUK</strong></h2>
+	            <h2><strong>Riwayat Masuk</strong></h2>
 
                 {this.state.data.rows && (
                     <CSVLink
@@ -102,7 +100,7 @@ class DatatablePage extends Component{
 	                    entries={5}
 	                    entriesOptions={[ 5, 10, 20, 50, 100 ]}
 	                    data={this.state.data}
-	                    sorting={true}
+	                    sorting={this.state.sorting}
 	                />
 	            )}
 	        </>

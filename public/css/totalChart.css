@@ -1,0 +1,47 @@
+.row > div.totalFirstCard > .totalNum{
+    font-size: 50px;
+}  
+
+.row > div.totalFirstCard{
+    padding: 1rem;
+    background-color: #7CB5EC;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+  }
+
+.row > div.totalInCard > .totalNum{
+    font-size: 50px;
+}   
+
+.row > div.totalInCard{
+    padding: 1rem;
+    background-color: #434348;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+  }
+
+  .row > div.totalSellCard > .totalNum{
+    font-size: 50px;
+} 
+
+.row > div.totalSellCard{
+    padding: 1rem;
+    background-color: #90ED7D;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+  }
+
+.row > div.totalFinalCard > .totalNum{
+    font-size: 50px;
+}  
+  
+.row > div.totalFinalCard{
+    padding: 1rem;
+    background-color: #F7A35C;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+  }
