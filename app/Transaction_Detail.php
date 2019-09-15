@@ -11,10 +11,10 @@ class Transaction_Detail extends Model
 	public $timestamps = false;
 
 	public function transaction(){
-		return $this->belongsTo(Transaction::class,'id_transaction');
+		return $this->belongsTo(Transaction::class,'id_transaction', 'id_transaction');
 	}
 
 	public function goods(){
-		return $this->belongsTo(Goods::class,'id_goods');
+		return $this->belongsTo(Goods::class,'id_goods', 'id_goods');
 	}
 }
