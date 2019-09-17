@@ -25,3 +25,5 @@ Route::resource('api/graphTotal', 'graphTotalController');
 Route::resource('api/inHistory', 'inHistoryController');
 
 Route::resource('api/outHistory', 'outHistoryController');
+
+Route::resource('api/stockReport', 'stockReportController');
